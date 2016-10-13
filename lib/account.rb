@@ -9,12 +9,12 @@ class Account
 
   def deposit(credit, date = Time.now.strftime("%d/%m/%Y").to_s)
     @balance += credit
-    @history << [date, credit, @balance]
+    @history << "#{date} || #{credit} || || #{@balance}"
   end
 
   def withdraw(debit, date = Time.now.strftime("%d/%m/%Y").to_s)
     @balance -= debit
-    @history << [date, debit, @balance]
+    @history << "#{date} || || #{debit} || #{@balance}"
   end
 
 end

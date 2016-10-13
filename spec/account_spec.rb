@@ -17,7 +17,7 @@ describe Account do
     it 'saves the date of the deposit' do
       allow(Time).to receive(:now).and_return(Time.mktime(2016,10,16))
       account.deposit(50)
-      expect(account.history).to include(['16/10/2016', 50, 50])
+      expect(account.history).to include('16/10/2016 || 50 || || 50')
     end
 
   end
@@ -31,7 +31,7 @@ describe Account do
       allow(Time).to receive(:now).and_return(Time.mktime(2016,10,16))
       account.deposit(50)
       account.withdraw(20)
-      expect(account.history).to include(['16/10/2016', 20, 30])
+      expect(account.history).to include('16/10/2016 || || 20 || 30')
     end
   end
 
