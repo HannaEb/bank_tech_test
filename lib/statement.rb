@@ -1,5 +1,4 @@
 class Statement
-
   HEADER = "date || credit || debit || balance"
   attr_reader :account
 
