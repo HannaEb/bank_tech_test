@@ -14,10 +14,10 @@ describe Account do
       expect{account.deposit(50)}.to change{account.balance}.by(50)
     end
 
-    it 'saves the date of the deposit' do
+    it 'saves the details of the deposit' do
       allow(Time).to receive(:now).and_return(Time.mktime(2016,10,16))
       account.deposit(50)
-      expect(account.history).to include('16/10/2016 || 50 || || 50')
+      expect(account.history).to include('16/10/2016 || 50.00 || || 50.00')
     end
 
   end
@@ -27,11 +27,11 @@ describe Account do
       expect{account.withdraw(20)}.to change{account.balance}.by(-20)
     end
 
-    it 'saves the date of the withdrawl' do
+    it 'saves the details of the withdrawl' do
       allow(Time).to receive(:now).and_return(Time.mktime(2016,10,16))
       account.deposit(50)
       account.withdraw(20)
-      expect(account.history).to include('16/10/2016 || || 20 || 30')
+      expect(account.history).to include('16/10/2016 || || 20.00 || 30.00')
     end
   end
 
