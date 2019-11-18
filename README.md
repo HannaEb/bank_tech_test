@@ -2,7 +2,7 @@ Bank Tech Test
 ==============
 
 
-Userstories
+User Stories
 -----------
 ```
 As a customer
