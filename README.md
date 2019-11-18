@@ -1,7 +1,8 @@
-The Bank Tech Test
-==================
+Bank Tech Test
+==============
 
 
+```
 Userstories
 -----------
 As a customer
@@ -19,6 +20,7 @@ I want to have an account statement
 As a customer
 So I can see my account summary
 I want to be able to print it in a legible format
+```
 
 
 Installation
